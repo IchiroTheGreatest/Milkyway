@@ -1,0 +1,609 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Млечный Путь</title>
+	
+	<style>
+		*{
+			margin: 0;
+			font-family: 'Oswald', sans-serif;
+			scroll-behavior: smooth;
+		}
+		.header{
+			height: 15vh;
+			background: rgb(221,227,255);
+			background: linear-gradient(90deg, rgba(221,227,255,1) 0%, rgba(166,191,255,1) 20%, rgba(5,29,157,1) 100%);
+		}
+		.left-side{
+			width: 425px;
+			height: 100px;
+			padding-top: 10px;
+			margin-left: 150px;
+			float: left;
+		}
+		.logo-png{
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+		.logo-text{
+			font-size: 46px;
+			color: #ffce1f;
+			float: left;
+			margin: 20px;
+		}
+		.right-side{
+			width: 700px;
+			height: 125px;
+			padding-top: 10px;
+			float: right;
+			margin-right: 75px;
+		}
+		.menu-grid{
+			display: grid;
+			height: 100%;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr;
+			grid-gap: 25px;
+			text-align: center;
+			
+		}
+		.item{
+			color: #ffce1f;
+			padding-top: 45px;
+			font-size: 22px;	
+			text-decoration: none;
+		}
+		.main{
+			background-image: url(img/bg.jpg);
+			background-size: cover;
+			background-position: center;
+			height: 85vh;
+		}
+		.main-logo{
+			color: #efefef;
+			text-align: center;
+			font-size: 132px;
+			padding-top: 300px;	
+		}
+		.about{
+			background-color: #efefef;
+		}
+		.logo-about{
+			text-align: center;
+			font-size: 76px;
+			padding-top: 75px;
+		}
+		.galery{
+			height: 100vh;
+			background-color: #efefef;
+			border-bottom: 1px solid #000000;
+		}
+		.facts{
+			padding-bottom: 50px;
+			background-color: #efefef;
+			border-bottom: 1px solid #000000;
+		}
+		.logo-facts{
+			text-align: center;
+			font-size: 76px;
+			padding-top: 75px;		
+		}
+		.link{
+			color: #ffce1f;
+			font-size: 22px;	
+			text-decoration: none;		
+		}
+		.grid-people{
+			display: grid;
+			width: 1200px;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 50px;
+			margin: auto;
+			margin-top: 100px;
+		}
+		.person{
+			height: 600px;
+		}
+		.img-people{
+			width: 200px;
+			height: 270px;
+			border-radius: 15px;
+		}
+		.text-people{
+			text-align: center;
+			font-size: 14px;
+		}
+		.eng{
+			background-color: #efefef;
+			border-bottom: 1px solid #000000;
+			padding-bottom: 50px;
+		}
+		.uhead{
+			text-align: center;
+			font-size: xx-large;
+			margin-top: 35px;
+		}
+		.deftext{
+			text-align: center;
+			font-size: 18px;
+			width: 400px;
+			float: left;
+		}
+		.fact{
+			padding: 25px;
+		}
+		.defimg{
+			background-color: #000000;
+			width: 375px;
+			height: 375px;
+			margin-top: 50px;
+			margin-left: 15px;
+		}
+		.fl{
+			float: left;
+			margin-left: 25px;
+
+		}
+		.cosfacts{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			width: 1425px;
+			margin: auto;
+			margin-top: 50px;
+			grid-gap: 75px;
+		}
+		.m1{
+			grid-column: 1;
+			grid-row: 1/3;
+		}
+		.m2{
+			grid-column: 2/4;
+			grid-row: 1;
+		}
+		.m3{
+			grid-column: 2/4;
+			grid-row: 2;
+		}
+		.t1{
+			grid-column: 3;
+			grid-row: 1/3;
+		}
+		.t2{
+			grid-column: 1/3;
+			grid-row: 1;
+		}
+		.t3{
+			grid-column: 1/3;
+			grid-row: 2;
+		}
+		.mt{
+			margin-top: 80px;
+		}
+		.mtx{
+			margin-top: 130px;
+		}
+		.mtxl{
+			margin-top: 115px;
+		}
+		.mtxxl{
+			margin-top: 190px;
+		}
+		.bg{
+			background-image: url(img/facts/luna.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.bg2{
+			background-image: url(img/facts/Cosmos_2.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.bg2_2{
+			background-image: url(img/facts/luna2.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.bg2_3{
+			background-image: url(img/facts/grav.png);
+			background-position: center;
+			background-size: cover;
+		}
+		.bg2_1{
+			background-image: url(img/facts/zapax.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.infa{
+			width: 1400px;
+			margin: auto;
+			text-align: center;
+			font-size: 20px;
+			margin-top: 50px;
+		}
+		.img-eng{
+			width: 1400px;
+			margin: auto;
+			margin-top: 50px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 50px;
+			grid-template-rows: 1fr;
+		}
+		.engik{
+			height: 400px;
+		}
+		.en1{
+			background-image: url(img/facts/Earth.jpeg);
+			background-position: center;
+			background-size: cover;
+		}
+		.en2{
+			background-image: url(img/facts/chel_chto_to_programmiruet.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.en3{
+			background-image: url(img/facts/ingkosmos.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.xlxl{
+			margin-top: 175px;
+		}
+		.bg3{
+			background-image: url(img/facts/krasnyj-gigant.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.bg3_1{
+			background-image: url(img/facts/dira.jpeg);
+			background-position: right;
+			background-size: cover;
+		}
+		.bg3_2{
+			background-image: url(img/facts/new.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.grid-photo{
+			width: 1200px;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			margin: auto;
+			grid-gap: 25px;
+			margin-top: 70px;
+		}
+		.f1{
+			height: 300px;
+			border-radius: 15px;
+			background-image: url(img/спутники/sputnik.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.f2{
+			height: 300px;
+			border-radius: 15px;
+			background-image: url(img/спутники/sputnik1.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.f3{
+			height: 300px;
+			border-radius: 15px;
+			background-image: url(img/спутники/sputnik2.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.f4{
+			height: 300px;
+			border-radius: 15px;
+			background-image: url(img/мкс/mks.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.f5{
+			height: 300px;
+			border-radius: 15px;
+			background-image: url(img/мкс/mks1.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.f6{
+			height: 300px;
+			border-radius: 15px;
+			background-image: url(img/мкс/mks2.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.mks{
+			background-image: url(img/мкс/cosmosst.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.mks1{
+			background-image: url(img/мкс/mk.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+		.mks2{
+			background-image: url(img/мкс/cosmosst1.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+	</style>
+  </head>
+  <body>
+    <section class="header">
+		<div class="left-side">
+			<img class="logo-png" src="img/kosmos.png">
+			
+			</img>
+			<h1 class="logo-text">
+				МЛЕЧНЫЙ ПУТЬ
+			</h1>
+		</div>
+		<div class="right-side">
+			<div class="menu-grid">
+				<div class="item">
+					<a href="#facts" class="link">Факты</a>
+				</div>
+				<div class="item">
+					<a href="#galery" class="link">Галерея</a>
+				</div>
+				<div class="item">
+					<a href="#about" class="link">О нас</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class = "main">
+		<h1 class="main-logo">МЛЕЧНЫЙ ПУТЬ</h1>
+	</section>
+	<section class = "eng" id="eng">
+		<h1 class="logo-facts">ИНЖЕНЕРИЯ КОСМИЧЕСКИХ СИСТЕМ</h1>
+		<p class="infa">Инженерия космических систем. Компетенция представляет собой проектирование, численное моделирование, программирование, сборку и наземные испытания функциональной модели микроспутника дистанционного зондирования Земли. Квалифицированные специалисты в этой области ведут свою системную задачу от идеи до эксплуатации оборудования на орбите и на земле инженерия космических систем является важной частью любой успешной космической миссии, включая разработку, запуск и пилотирование любого космического аппарата. Инженеры космических систем разрабатывают искусственный спутник Земли, способный выполнять функции дистанционного зондирования. Участники создают 3D-модель, изготавливают и собирают корпус спутника, разрабатывают часть электрооборудования, собирают функциональную модель аппарата, выполняют моделирование полёта, а также проводят автономные и функциональные испытания, производят инженерные расчёты. Они должны обладать знаниями и навыками в сфере баллистики и навигации, 3D-моделирования, электроники, радиотехники, программирования, материаловедения, в области устройства и испытаний космической техники.</p>
+		<h2 class="uhead">
+			О профессии
+		</h2>
+		<p class="infa">Главный специалист космической отрасли – аэрокосмический инженер. Жизнь космонавтов, успех всей миссии, а глобально и всей космической отрасли, именно в их руках. Инженеры занимаются разработкой ракет, спутников, оборудования для наземного использования. <a href = "https://yandex.ru/images/search?text=%D0%BA%D1%82%D0%BE%20%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%20%D1%85%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D1%8B%20%D1%85%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BE%D0%B2%D0%BE%D0%B4%D1%8B&stype=image&lr=121816&source=wiz">Эта</a> профессия сочетает в себе физику, программирование и, безусловно, творческую жилку, ведь именно она позволяет инженерам создавать что-то принципиально новое, а это – самое важное для достижения прогресса. На сегодняшний момент космическая отрасль переходит из глобальных военных задач на более простые практические, используемые нами ежедневно: GPS и ГЛОНАСС, которые необходимы для работы карт и навигаторов, сотовой связи и метеонаблюдений.</p>
+		<div class="img-eng">
+			<div class="engik en1">
+				
+			</div>
+			<div class="engik en2">
+
+			</div>
+			<div class="engik en3">
+
+			</div>
+		</div>
+	</section>
+	<section class = "facts" id="facts">
+		<h1 class="logo-facts">ФАКТЫ</h1>
+		<h2 class="uhead">
+			Интересные факты о космосе
+		</h2>
+		<div class="cosfacts">
+			<div class="fact m1">
+				<p class="deftext mtxl">		
+					Планета из графита и алмазов.
+					30 августа 2004 года астрономы обнаружили таинственную планету в созвездии Рака. По мнению сотрудников Йельского университета, она вдвое больше и в восемь раз тяжелее Земли. Но главное — Янссен почти целиком состоит из графита и алмазов.Forbes оценил стоимость планеты в $26,9 нониллионов. По космическим меркам, гигантский алмаз расположен неподалеку от землян — всего в 40 световых годах. Правда, температура его поверхности достигает 2,148 тыс. градусов. А скорость вращения настолько высокая, что один год там равняется 18 земным часам. Кроме того, недавно ученые выяснили, что одна сторона Янссена находится в расплавленном состоянии и представляет собой углеродную лаву.
+				</p>
+				<img src="img/facts/almaz-2.jpg" alt="" class="defimg fl">
+			</div>
+			<div class="fact m2">
+				<p class="deftext mt">		
+					Без Луны на Земле вымрут морские обитатели.  
+					Если спутник Земли исчезнет, скорее всего, глобальной катастрофы не случится.Но все же некоторые серьезные изменения произойдут. Например,перестанут существовать многие водные виды спорта.Фазы Луны влияют на волны — проходя над поверхностью нашей планеты.Кроме того, вымрут морские обитатели, жизнь которых напрямую связана с приливами и отливами. Без спутника на Земле не будет солнечных и лунных затмений, а тектонические плиты сместятся, вызвав землетрясения и извержения вулканов. Но главное — климат планеты уже не будет прежним.
+				</p>
+				<div alt="" class="defimg fl bg"></div>
+			</div>
+			<div class="fact m3">
+				<p class="deftext mt">		
+					В космосе царит тишина.
+    				Самым тихим местом на нашей планете считается безэховая камера в Лаборатории Орфилда — она поглощает до 99,99% звуков. Сегодня в этой лаборатории проводят различные исследования и тестируют приборы. Также в подобных изолированных пространствах специалисты NASA испытывают будущих астронавтов. В космосе нет звуков — из-за отсутствия воздуха. Поэтому даже самые мощные галактические взрывы происходят в полной тишине. Работать в таких условиях очень трудно: всего несколько минут в звуковом вакууме вызывают у неподготовленных людей панические атаки и сильные слуховые галлюцинации.
+				</p>
+				<div alt="" class="defimg fl bg2"></div>
+			</div>
+		</div>
+		<div class="cosfacts">
+			<div class="fact t1">
+				<p class="deftext mtxxl">		
+					В космосе другие запахи.
+					Аромат роз, распустившихся на шаттле Discovery, хоть и остался приятным, но сильно отличался от запаха земных роз. Этот факт объяснить легко: такая разница в запахах растений возникает из-за разницы температуры и влажности на Земле и внутри космического аппарата.
+				</p>
+				<div class="defimg fl bg2_1"></div>
+			</div>
+			<div class="fact t2">
+				<p class="deftext mtx">		
+					Луна покидает земную орбиту.
+					Луна постепенно удаляется от нашей планеты. Правда, происходит это с очень незначительной скоростью — 38 мм в год. Исследователи рассчитали, что 1,5 млрд лет назад земные сутки длились примерно 18 часов. В то время Луна находилась к Земле на 44 тыс. км ближе.По мнению астрофизиков, возросшее расстояние повлияло на вращение планеты вокруг своей оси, а вместе с тем на климат и продолжительность дня.
+				</p>
+				<div alt="" class="defimg fl bg2_2"></div>
+			</div>
+			<div class="fact t3">
+				<p class="deftext mtx">		
+					Мощное гравитационное поле замедляет время.
+					Из-за гравитации время в космосе протекает по-разному. Чем мощнее гравитационное поле, тем сильнее замедляется время. Например, для космонавтов время тянется на доли секунды быстрее, чем для людей на Земле. А вблизи черной дыры оно почти полностью останавливается.
+				</p>
+				<div alt="" class="defimg fl bg2_3"></div>
+			</div>
+		</div>
+		<div class="cosfacts">
+			<div class="fact m1">
+				<p class="deftext xlxl">		
+					Звезды-гиганты.
+					Если вы думали что солнце-это самая большая звезда,то вы сильно ошибаетесь. В космосе обитают настоящие звёзды-гиганты, масса которых в 8 или больше раз превосходит солнечную массу. Такие звёзды называются нейтронными: их плотность настолько высока, что всего горсть материи нейтронной звезды легко перевесит высочайшие горы Земли.
+				</p>
+				<div class="defimg fl bg3"> </div>
+			</div>
+			<div class="fact m2">
+				<p class="deftext mt">		
+					Чёрные дыры могут производить звуки.
+					Так как космос -это неполный вакум,распространение звуков в нём практически невозможно. Например, если бы человек попробовал закричать в космосе, его бы не было слышно. В 2003 году астрономы преподнесли удивительную новость: чёрные дыры производят звуки. Учёные выяснили, почему чёрные дыры не «немые» в отличие от большинства небесных тел: только они способны распространять настолько низкочастотные звуковые волны, что они слышны в неполном вакууме. 
+				</p>
+				<div alt="" class="defimg fl bg3_1"></div>
+			</div>
+			<div class="fact m3">
+				<p class="deftext mt">		
+					Космическая невесомость.
+					О космической невесомости слышали все и видели кадры, где космонавты легко летают внутри космической станции. Но невесомость — это не только интересное явление. В условиях невесомости мышцы и кости атрофируются из-за того, что их почти не нагружают. Чтобы не растерять здоровье, космонавты принимают витамины и занимаются спортом, например, используют специально обустроенную беговую дорожку. Ещё один интересный факт — в невесомости расстояние между позвонками становится больше, и рост человека увеличивается. Так, рекорд по вырастанию в космосе взрослого человека составил 10 см.
+				</p>
+				<div alt="" class="defimg fl bg3_2"></div>
+			</div>
+		</div>
+		<h2 class="uhead">
+			Факты о МКС
+		</h2>
+		<div class="cosfacts">
+			<div class="fact m1">
+				<p class="deftext mtxl">		
+					Международная космическая станция - пилотируемая орбитальная станция , используемая как многоцелевой космический исследовательский комплекс; эксплуатируется с конца 1998 г. по настоящее время (странами согласована эксплуатация по 2024 г. включительно, рассматривается продление срока работы до 2028 г. 2030 г.). МКС— совместный международный проект, в котором участвуют 14 стран:Россия, США, Япония, Канада, и входящие в Европейское космическое агенство Бельгии, Германия, Дания, Испания, Италия, Нидерланды, Норвегия, Франция, Швейцария, Швеция.
+				</p>
+				<div class="defimg fl mks"></div>
+			</div>
+			<div class="fact m2">
+				<p class="deftext mt">		
+					2 сентября 1993 года председатель правительства РФ В.С. Черномырдин и вице-президент США А. Гор подписали "Совместное заявление о сотрудничестве в космосе" В его развитие РКА и НАСА разработали и 1 ноября 1993 года подписали "Детальный план работ по Международной космической станции".
+
+					В 1994 г. МКС имела следующую структуру :
+					- в создании станции, кроме России и США, участвуют Канада, Япония и страны Европейского сотрудничества;
+					- станция будет состоять из 2-х интегрированных сегментов (российского и американского). 
+				</p>
+				<div alt="" class="defimg fl mks1"></div>
+			</div>
+			<div class="fact m3">
+				<p class="deftext mt">		
+					В 2021 г. к МКС планируется  пристыковать российский многофункциональный лабораторный модуль (МЛМ) «Наука». В данное время согласовано финансирование  и эксплуатация  МКС по 2024 г. включительно, рассматривается дальнейший  цикл продления до 2028-2030 г.
+В 2024 году американская компания  Aximo Space планирует пристыковать к модулю «Гармония» первый коммерческий модуль, а к нему— два других, и использовать их для космическего туризма. После закрытия проекта МКС, модули планируется дооснастить независимой СЖО, отстыковать, и использовать как коммерческую орбитальную станцию.
+				</p>
+				<div alt="" class="defimg fl mks2"></div>
+			</div>
+		</div>
+					
+	</section>
+	<section class = "galery" id="galery">
+		<h1 class="logo-about">ГАЛЕРЕЯ</h1>
+		<div class="grid-photo">
+			<div class="f1">
+				
+			</div>
+			<div class="f2">
+				
+			</div>
+			<div class="f3">
+				
+			</div>
+			<div class="f4">
+				
+			</div>
+			<div class="f5">
+				
+			</div>
+			<div class="f6">
+				
+			</div>
+		</div>
+	</section>
+	<section class = "about" id="about">
+		<h1 class="logo-about">О НАС</h1>
+		<div class="grid-people">
+			<div class="person">
+				<img class="img-people" src="img/IMG1.jpeg">
+
+				</img>
+				<p class="text-people">Приветствую, меня зовут Ибрагим и мне 13 лет. Как и большинство ребят из Ингушетии. Я увлекаюсь коддингом на PYTHON и JS, а также плаванием и дзюдо. В компитеции "Инженерия Космических Систем" я являюсь главой всего.
+					Я проверяю идёт ли всё правильно в нашей работе. Где надо я могу помочь и подправить. Я отвечаю за нашу презентацию и в случае необхадимости обязан защишать её.</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG2.jpeg">
+
+				</img>
+				<p class="text-people">Меня зовут Дмитрий Винокуров, мне 13 лет. Я из Краснодарского края, станицы Холмской. Я учусь в 8 классе школы номер 17. Я профессионально занимаюсь театральным исскуством и вокалом.  У меня есть две грамоты за лучшее исполнение роли регионального фестиваля "Золотой Петушок". Я лауреат многих международных конкурсов по вокалу и театральном исскуству.</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG3.jpeg">
+
+				</img>
+				<p class="text-people">Меня зовут Эмир мне 13 лет, я из республики Ингушетии. Занимаюсь борьбой, робототехникой, увлекаюсь  литературой, люблю комедийные фильмы. 
+					В инженерии космических систем я занимался поиском информации для разработки этого сайта. Я собирал информацию про мкс и информацию про спутники. Также руковожу рекламой нашего сайта.</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG4.jpeg">
+
+				</img>
+				<p class="text-people">
+					Меня зовут Ислам. Мне 12 лет. Я из Республики Ингушетии. Я интересуюсь программированием, математикой и киберспортом.
+					Я попал в ВДЦ "Смена", так как у меня были навыки в IT разработке. Я хожу на компентенцию по инженерии космических систем. Мы с ребятами разрабатываем сайт о космосе. Я помогаю искать информацию для сайта.
+				</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG5.jpeg">
+
+				</img>
+				<p class="text-people">
+					Меня зовут Исмаил и мне 13 лет. Я из республики Ингушетия.
+					Моим хобби является программирование, в особенности python-разработка.
+					Я занимаюсь написанием программного кода для данного проекта вместе с парой ребят.
+				</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG6.jpeg">
+
+				</img>
+				<p class="text-people">
+					Меня зовут Расул. Мне 13 лет. Я из Республики Ингушетия.
+					Я увлекаюсь написанием программного кода и фрилансом.
+					Я пишу код для данного проекта совместно с другими ребятами. 
+				</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG7.jpeg">
+
+				</img>
+				<p class="text-people">
+					Меня зовут Тимур, мне 13 лет, я приехал из города Абинска, Краснодарский Край
+					Я занимаюсь спортом и увлекаюсь техникой. Учусь в 8 классе, школа №4.
+					На компетенции инженерия космических систем мы создаем проект, в котором я занимаюсь поиском информации(интересные факты, опровержения или утверждения)
+				</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG8.jpeg">
+
+				</img>
+				<p class="text-people">
+					Привет, меня зовут Тамерлан Барахоев, мне 13 лет. Я приехал из Кавказа, Республики Ингушетия. Учусь я так же в 8 классе, гимназии №1. Увлечений у меня много, и вот одни из самых важнейших: я занимаюсь изучением биологии, физики и астрономии. Я профессионально занимаюсь журналистикой. Был призером на различных олимпиадах, семинарах и мероприятиях по экологии. Так же занимаюсь графическим дизайном.
+				</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG9.jpeg">
+
+				</img>
+				<p class="text-people">
+					Меня зовут Кирилл, мне 13 лет, я приехал в Смену из города Абинска, Краснодарский Край
+					Я занимаюсь футболом, люблю собирать разные конструкторы люблю повозиться с машинами (техникой).
+					На компетенции инженерия космических систем мы создаем проект, в котором я занимаюсь добычей информации.
+				</p>
+			</div>
+			<div class="person">
+				<img class="img-people" src="img/IMG10.jpeg">
+
+				</img>
+				<p class="text-people pasha">
+					Меня зовут Паша Болтвин мне 13 лет и я живу в теплых краях на Кубани в посёлке Ахтырском. Я занимаюсь спортом «легкой атлетикой и футболом»играю за команду Кубань. Я попал в смену так как у меня много грамот и медалей , и вот так я попал в самый лучший лагерь в России. В инженерии космических систем я добываю информацию о космонавтах.
+					Помимо всего этого я рекламирую наш сайт(Млечный Путь).
+				</p>
+
+			</div>
+			
+		</div>
+	</section>
+  </body>
+</html>
